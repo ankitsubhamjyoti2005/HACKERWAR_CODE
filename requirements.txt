@@ -5,6 +5,6 @@ numpy
 python-dateutil==2.9.0.post0
 s3transfer==0.10.2
 six==1.16.0
-
+urllib3==2.2.2
 websocket-client==1.8.0
 websockets==13.0.1
