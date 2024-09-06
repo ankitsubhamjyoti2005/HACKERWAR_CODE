@@ -44,7 +44,7 @@ def analyze(processed_data):
 
 
 def send_data_to_endpoint(processed_data, risk_level):
-    endpoint = "ws://127.0.0.1:5000"
+    endpoint = "ws://0.0.0.0:5500"
     ws = websocket.create_connection(endpoint)
     message = {
         "processed_data": processed_data,
@@ -83,7 +83,7 @@ def on_open(ws):
 
 
 ws = websocket.WebSocketApp(
-    "ws://127.0.0.1:5000",
+    "ws://0.0.0.0:5000",
     on_message=on_message,
     on_error=on_error,
     on_close=on_close,

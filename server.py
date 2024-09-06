@@ -99,7 +99,7 @@ async def send_data_from_dynamodb(websocket, path):
             pass
 
 
-start_server = websockets.serve(send_data_from_dynamodb, "127.0.0.1", 5000)
+start_server = websockets.serve(send_data_from_dynamodb, "0.0.0.0", 5000)
 
 asyncio.get_event_loop().run_until_complete(start_server)
 asyncio.get_event_loop().run_forever()
